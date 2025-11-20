@@ -6,26 +6,28 @@
 
 body {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('assets/floor.png');
     background-repeat: repeat;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     font-family: 'Press Start 2P', cursive;
+    position: relative;
 }
 
 .ca-text {
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: 20px;
     color: #fff;
-    font-size: 14px;
+    font-size: clamp(10px, 1.2vw, 14px);
     z-index: 10;
     white-space: nowrap;
 }
 
 .container {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +35,7 @@ body {
 
 .logo {
     margin-top: 20px;
-    max-width: 360px;
+    max-width: min(360px, 90vw);
     width: auto;
     height: auto;
 }
@@ -47,7 +49,7 @@ body {
 }
 
 .how-screen {
-    max-width: 80%;
+    max-width: min(80%, 90vw);
     width: auto;
     height: auto;
 }
@@ -63,8 +65,7 @@ body {
 }
 
 .how-title {
-    font-size: 20px;
-    
+    font-size: clamp(12px, 2vw, 20px);
     margin-top: -10px;
     color: #fff;
 }
@@ -80,7 +81,7 @@ body {
     width: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    font-size: 16px;
+    font-size: clamp(10px, 1.5vw, 16px);
     color: #fff;
     line-height: 1.2;
 }
@@ -109,12 +110,12 @@ body {
 .bot-card {
     width: auto;
     height: auto;
-    max-width: 80%;
+    max-width: min(300px, 22vw, 80%);
 }
 
 .bot-pfp {
     position: absolute;
-    top: 20px;
+    top: 8%;
     left: 50%;
     transform: translateX(-50%);
     width: auto;
@@ -125,40 +126,40 @@ body {
 
 .bot-name {
     position: absolute;
-    top: 140px;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
-    font-size: 22px;
+    font-size: clamp(14px, 2.5vw, 22px);
     z-index: 2;
     white-space: nowrap;
 }
 
 .bot-wallet {
     position: absolute;
-    top: 180px;
+    top: 60%;
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
-    font-size: 12px;
+    font-size: clamp(7px, 1.1vw, 11px);
     z-index: 2;
     text-align: center;
-    width: 70%;
+    width: 68%;
     word-break: break-all;
     line-height: 1.4;
 }
 
 .copy-btn {
     position: absolute;
-    top: 240px;
+    top: 75%;
     left: 50%;
     transform: translateX(-50%);
     background-color: #0894ff;
     border: 2px solid #0863ff;
     color: #fff;
     font-family: 'Press Start 2P', cursive;
-    font-size: 20px;
-    padding: 10px 16px;
+    font-size: clamp(12px, 2vw, 20px);
+    padding: clamp(6px, 1vw, 10px) clamp(10px, 1.5vw, 16px);
     cursor: pointer;
     z-index: 2;
     white-space: nowrap;
@@ -188,7 +189,7 @@ body {
 .watch-live {
     width: auto;
     height: auto;
-    max-width: 200px;
+    max-width: min(200px, 50vw);
     display: block;
 }
 
@@ -217,6 +218,69 @@ body {
 .social-logo {
     width: auto;
     height: auto;
-    max-width: 60px;
+    max-width: min(60px, 12vw);
     display: block;
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+    .bot-card {
+        max-width: min(250px, 40vw, 80%);
+    }
+}
+
+@media (max-width: 768px) {
+    .bot-card {
+        max-width: min(300px, 80vw, 80%);
+    }
+    
+    .bot-cards {
+        gap: clamp(10px, 3vw, 20px);
+    }
+    
+    .how-screen {
+        max-width: 95vw;
+    }
+    
+    .social-logos {
+        right: clamp(10px, 2vw, 20px);
+        gap: clamp(10px, 2vw, 20px);
+    }
+
+    .how-title {
+        margin-top: 12px;
+    }
+
+    .message-container {
+        margin-top: 20px;
+    }
+
+    .bot-name {
+        font-size: clamp(18px, 4vw, 22px);
+    }
+
+    .bot-wallet {
+        font-size: clamp(10px, 2vw, 12px);
+    }
+
+    .copy-btn {
+        font-size: clamp(16px, 3.5vw, 20px);
+        padding: clamp(8px, 1.5vw, 10px) clamp(12px, 2vw, 16px);
+    }
+}
+
+@media (max-width: 480px) {
+    .bot-name {
+        font-size: clamp(16px, 5vw, 20px);
+    }
+
+    .bot-wallet {
+        font-size: clamp(9px, 2.5vw, 11px);
+    }
+
+    .copy-btn {
+        font-size: clamp(14px, 4vw, 18px);
+        padding: clamp(8px, 2vw, 10px) clamp(12px, 2.5vw, 16px);
+    }
+}
+
