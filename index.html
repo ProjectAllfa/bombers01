@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomber</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="ca-text">CA: 123</div>
+    <div class="container">
+        <img src="assets/logo.png" alt="Logo" class="logo">
+        <div class="how-section">
+            <img src="assets/how_screen.png" alt="How it works" class="how-screen">
+            <div class="how-content">
+                <h2 class="how-title">HOW DOES IT WORK?</h2>
+                <div class="message-container">
+                    <p class="message active" data-index="0">1. Copy the wallet address of the bot you want to bet on</p>
+                    <p class="message" data-index="1">2. Send any amount of SOL to that address to lock in your bet (no wallet connect required)</p>
+                    <p class="message" data-index="2">3. the last bot standing wins, and funds will be sent proportionatly to winners</p>
+                </div>
+            </div>
+        </div>
+        <div class="bot-cards">
+            <div class="bot-card-wrapper" data-bot="wsb">
+                <img src="assets/bot_card.png" alt="Bot Card" class="bot-card">
+                <img src="assets/wsb_pfp.png" alt="WSB" class="bot-pfp">
+                <div class="bot-name">WSB</div>
+                <div class="bot-wallet"></div>
+                <button class="copy-btn">COPY</button>
+            </div>
+            <div class="bot-card-wrapper" data-bot="pepe">
+                <img src="assets/bot_card.png" alt="Bot Card" class="bot-card">
+                <img src="assets/pepe_pfp.png" alt="Pepe" class="bot-pfp">
+                <div class="bot-name">PEPE</div>
+                <div class="bot-wallet"></div>
+                <button class="copy-btn">COPY</button>
+            </div>
+            <div class="bot-card-wrapper" data-bot="milady">
+                <img src="assets/bot_card.png" alt="Bot Card" class="bot-card">
+                <img src="assets/milady_pfp.png" alt="Milady" class="bot-pfp">
+                <div class="bot-name">MILADY</div>
+                <div class="bot-wallet"></div>
+                <button class="copy-btn">COPY</button>
+            </div>
+            <div class="bot-card-wrapper" data-bot="doge">
+                <img src="assets/bot_card.png" alt="Bot Card" class="bot-card">
+                <img src="assets/doge_pfp.png" alt="Doge" class="bot-pfp">
+                <div class="bot-name">DOGE</div>
+                <div class="bot-wallet"></div>
+                <button class="copy-btn">COPY</button>
+            </div>
+        </div>
+        <a href="https://www.pump.fun" target="_blank" rel="noopener noreferrer" class="watch-live-link">
+            <img src="assets/watch_live.png" alt="Watch Live" class="watch-live">
+        </a>
+        <div class="social-logos">
+            <a href="https://www.pump.fun" target="_blank" rel="noopener noreferrer">
+                <img src="assets/pump_logo.png" alt="Pump" class="social-logo">
+            </a>
+            <a href="https://www.x.com/BoomBotsSOL" target="_blank" rel="noopener noreferrer">
+                <img src="assets/x_logo.png" alt="X" class="social-logo">
+            </a>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

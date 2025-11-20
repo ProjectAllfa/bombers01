@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url('assets/floor.png');
+    background-repeat: repeat;
+    overflow: hidden;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.ca-text {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 20px;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 20px;
+    max-width: 500px;
+    width: auto;
+    height: auto;
+}
+
+.how-section {
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.how-screen {
+    max-width: 90%;
+    width: auto;
+    height: auto;
+}
+
+.how-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+.how-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-top: -20px;
+    color: #fff;
+}
+
+.message-container {
+    position: relative;
+    min-height: 50px;
+    margin-top: 40px;
+}
+
+.message {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    font-size: 18px;
+    color: #fff;
+}
+
+.message.active {
+    opacity: 1;
+    position: relative;
+}
+
+.bot-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+
+.bot-card-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bot-card {
+    width: auto;
+    height: auto;
+}
+
+.bot-pfp {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    max-width: 45%;
+    z-index: 1;
+}
+
+.bot-name {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 30px;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.bot-wallet {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 14px;
+    z-index: 2;
+    text-align: center;
+    width: 80%;
+    word-break: break-all;
+    line-height: 1.4;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0894ff;
+    border: 2px solid #0863ff;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 22px;
+    padding: 10px 16px;
+    cursor: pointer;
+    z-index: 2;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+
+.copy-btn:hover {
+    opacity: 0.8;
+}
+
+.copy-btn:active {
+    opacity: 0.6;
+}
+
+.watch-live-link {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.watch-live-link:hover {
+    opacity: 0.8;
+}
+
+.watch-live {
+    width: auto;
+    height: auto;
+    max-width: 240px;
+    display: block;
+}
+
+.social-logos {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    z-index: 10;
+}
+
+.social-logos a {
+    display: block;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.social-logos a:hover {
+    opacity: 0.7;
+}
+
+.social-logo {
+    width: auto;
+    height: auto;
+    max-width: 80px;
+    display: block;
+}
