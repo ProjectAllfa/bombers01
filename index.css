@@ -151,15 +151,15 @@ body {
 
 .copy-btn {
     position: absolute;
-    top: 75%;
+    top: 80%;
     left: 50%;
     transform: translateX(-50%);
     background-color: #0894ff;
     border: 2px solid #0863ff;
     color: #fff;
     font-family: 'Press Start 2P', cursive;
-    font-size: clamp(12px, 2vw, 20px);
-    padding: clamp(6px, 1vw, 10px) clamp(10px, 1.5vw, 16px);
+    font-size: clamp(9px, 1.4vw, 14px);
+    padding: clamp(4px, 0.7vw, 7px) clamp(7px, 1.1vw, 11px);
     cursor: pointer;
     z-index: 2;
     white-space: nowrap;
@@ -222,6 +222,15 @@ body {
     display: block;
 }
 
+/* Large desktop screens - larger copy button */
+@media (min-width: 1400px) {
+    .copy-btn {
+        top: 77%;
+        font-size: clamp(12px, 2vw, 20px);
+        padding: clamp(6px, 1vw, 10px) clamp(10px, 1.5vw, 16px);
+    }
+}
+
 /* Responsive adjustments for smaller screens */
 @media (max-width: 1200px) {
     .bot-card {
@@ -230,6 +239,11 @@ body {
     
     .bot-cards {
         gap: clamp(10px, 1.5vw, 20px);
+    }
+    
+    .copy-btn {
+        font-size: clamp(10px, 1.5vw, 16px);
+        padding: clamp(5px, 0.8vw, 8px) clamp(8px, 1.2vw, 12px);
     }
 }
 
@@ -240,6 +254,11 @@ body {
     
     .bot-cards {
         gap: clamp(8px, 1.5vw, 15px);
+    }
+    
+    .copy-btn {
+        font-size: clamp(9px, 1.4vw, 14px);
+        padding: clamp(4px, 0.7vw, 7px) clamp(7px, 1.1vw, 11px);
     }
 }
 
@@ -298,5 +317,4 @@ body {
         padding: clamp(8px, 2vw, 10px) clamp(12px, 2.5vw, 16px);
     }
 }
-
 
