@@ -35,7 +35,7 @@ body {
 
 .logo {
     margin-top: 20px;
-    max-width: min(360px, 90vw);
+    max-width: min(280px, 70vw);
     width: auto;
     height: auto;
 }
@@ -49,7 +49,7 @@ body {
 }
 
 .how-screen {
-    max-width: min(80%, 90vw);
+    max-width: min(65%, 75vw);
     width: auto;
     height: auto;
 }
@@ -60,12 +60,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 80%;
-    max-width: 600px;
+    width: 65%;
+    max-width: 450px;
 }
 
 .how-title {
-    font-size: clamp(12px, 2vw, 20px);
+    font-size: clamp(10px, 1.6vw, 16px);
     margin-top: -10px;
     color: #fff;
 }
@@ -81,7 +81,7 @@ body {
     width: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    font-size: clamp(10px, 1.5vw, 16px);
+    font-size: clamp(8px, 1.2vw, 13px);
     color: #fff;
     line-height: 1.2;
 }
@@ -224,6 +224,27 @@ body {
 
 /* Large desktop screens - larger copy button */
 @media (min-width: 1400px) {
+    .logo {
+        max-width: min(360px, 90vw);
+    }
+    
+    .how-screen {
+        max-width: min(80%, 90vw);
+    }
+    
+    .how-content {
+        width: 80%;
+        max-width: 600px;
+    }
+    
+    .how-title {
+        font-size: clamp(12px, 2vw, 20px);
+    }
+    
+    .message {
+        font-size: clamp(10px, 1.5vw, 16px);
+    }
+    
     .copy-btn {
         top: 77%;
         font-size: clamp(12px, 2vw, 20px);
