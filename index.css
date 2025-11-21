@@ -16,13 +16,31 @@ body {
 }
 
 .ca-text {
-    position: absolute;
-    top: 20px;
-    left: 20px;
     color: #fff;
     font-size: clamp(10px, 1.2vw, 14px);
     z-index: 10;
+}
+
+.ca-text-desktop {
+    position: absolute;
+    top: 20px;
+    left: 20px;
     white-space: nowrap;
+    max-width: calc(100vw - 40px);
+    word-break: break-all;
+}
+
+.ca-text-mobile {
+    display: none;
+    text-align: center;
+    white-space: normal;
+    word-break: break-all;
+    margin-top: 20px;
+    padding: 0 20px;
+    max-width: 100%;
+    font-size: clamp(8px, 2.5vw, 12px);
+    line-height: 1.4;
+    font-size: 0.9rem;
 }
 
 .container {
@@ -284,6 +302,14 @@ body {
 }
 
 @media (max-width: 768px) {
+    .ca-text-desktop {
+        display: none;
+    }
+    
+    .ca-text-mobile {
+        display: block;
+    }
+    
     .bot-card {
         max-width: min(300px, 80vw, 80%);
     }
